@@ -1,0 +1,11 @@
+<template name="layout">
+  <div class="hero-unit">
+    <h1>Pinboard Tags for aktaplin</h1>
+  </div>
+  <div class="container">
+    {{#each addKeys tagListReturn }}
+    <p>{{key}} = {{value}}</p>
+    {{/each}}
+     {{#each tagBookmarksListReturn 'web'}} <p><a href="{{href}}">{{ description }}</a></p> {{/each}}
+  </div>
+</template>
