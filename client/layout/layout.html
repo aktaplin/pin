@@ -1,8 +1,8 @@
 <template name="layout">
-  <div class="hero-unit">
-    <h1>Pinboard Tags for aktaplin</h1>
-  </div>
   <div class="container">
+    <div class="page-header">
+      <h1>Pinboard Tags for aktaplin</h1>
+    </div>
     {{> test }} {{#each addKeys tagListReturn }}
     <p class="tag" id="{{key}}">{{key}} = {{value}}</p>
     {{/each}}
