@@ -3,9 +3,9 @@
     <h1>Pinboard Tags for aktaplin</h1>
   </div>
   <div class="container">
+    <div id="boing"></div>
     {{#each addKeys tagListReturn }}
-    <p>{{key}} = {{value}}</p>
+    <p class="tag" id="{{key}}">{{key}} = {{value}}</p>
     {{/each}}
-     {{#each tagBookmarksListReturn 'web'}} <p><a href="{{href}}">{{ description }}</a></p> {{/each}}
   </div>
 </template>
