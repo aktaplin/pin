@@ -16,13 +16,9 @@ UI.registerHelper('addKeys', function(all) {
 });
 
 Template.layout.events = {
-  'click .tag': function() {
-    if (Session.get('bookmarksOn') == 'true') {
-      UI.remove(Template.test)
-    }
-    click = {}
-    click['target'] = event.target.id
-    UI.insert(UI.renderWithData(Template.test, click), $("#boing").get(0));
-    Session.set('bookmarksOn', 'true')
+  'click .tag': function(event) {
+    console.log(event.target.id)
+    Session.set('clickedTag', event.target.id)
+    Session.set('bookmarkDetail', true)
   }
 };

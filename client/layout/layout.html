@@ -3,8 +3,7 @@
     <h1>Pinboard Tags for aktaplin</h1>
   </div>
   <div class="container">
-    <div id="boing"></div>
-    {{#each addKeys tagListReturn }}
+    {{> test }} {{#each addKeys tagListReturn }}
     <p class="tag" id="{{key}}">{{key}} = {{value}}</p>
     {{/each}}
   </div>
