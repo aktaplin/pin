@@ -1,0 +1,9 @@
+<template name="test">
+  {{#if tagBookmarksListReturn}}
+  <div id="bookmarks">your bookmarks are {{#each tagBookmarksListReturn }}
+    <p><a href="{{href}}">{{description}}</a>
+    </p>
+    {{/each}}
+  </div>
+  {{/if}}
+</template>
