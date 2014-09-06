@@ -1,17 +1,24 @@
 <template name="layout">
   <div class="container">
-    <div class="page-header">
-      <h1>Pinboard tags for aktaplin</h1>
+    <div class="row">
+      <div class="page-header">
+        <h1>Pinboard tags for aktaplin</h1>
+      </div>
     </div>
-    <div>{{>test}}</div>
-    <div>{{#each addKeys tagListReturn }}
-      <svg height="200" width="200">
-        <g>
-          <circle cx="50" cy="50" r="{{value}}" stroke="black" stroke-width="1" fill="red" />
-          <text class="tag" id="{{key}}" x="50" y="50" fill="black">{{key}}</text>
-        </g>
-      </svg>
-      {{/each}}
+    <div class="row">{{>tagBookmarks}}</div>
+    {{#each addKeys tagListReturn }}
+    <div class="row tagRow">
+      <div class="col-md-2">
+        <p class="tag" id="{{key}}">{{key}}</p>
+      </div>
+      <div class="col-md-10">
+        {{#times value }}
+        <svg height="15" width="15">
+          <rect width="15" height="15" stroke="black" stroke-width="0" fill="#42294C" />
+        </svg>
+        {{/times}}
+      </div>
     </div>
+    {{/each}}
   </div>
 </template>
