@@ -1,7 +1,8 @@
-.tag {
-  border-radius: 50%;
+.bookmark {
+  background-color: white;
+  top: 0;
 }
 
 .tagRow {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }

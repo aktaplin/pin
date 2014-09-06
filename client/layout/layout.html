@@ -1,24 +1,26 @@
 <template name="layout">
-  <div class="container">
-    <div class="row">
-      <div class="page-header">
-        <h1>Pinboard tags for aktaplin</h1>
-      </div>
-    </div>
-    <div class="row">{{>tagBookmarks}}</div>
-    {{#each addKeys tagListReturn }}
-    <div class="row tagRow">
-      <div class="col-md-2">
-        <p class="tag" id="{{key}}">{{key}}</p>
-      </div>
-      <div class="col-md-10">
-        {{#times value }}
-        <svg height="15" width="15">
-          <rect width="15" height="15" stroke="black" stroke-width="0" fill="#42294C" />
-        </svg>
-        {{/times}}
-      </div>
-    </div>
-    {{/each}}
+
+  <div class="page-header">
+    <h1>pinboard.in tags for aktaplin <small>batch organize</small></h1>
   </div>
+
+  <div class="row bookmark" data-spy="affix" data-offset-top="125">
+    <div class="col-md-12">{{>tagBookmarks}}</div>
+  </div>
+
+  {{#each addKeys tagListReturn}}
+
+  <div class="tagRow">
+      <h4>{{key}}</h4>
+      {{#times value}}
+      <svg height="15" width="15">
+        <rect width="15" height="15" stroke="black" stroke-width="0" fill="#42294C" />
+      </svg>
+      {{/times}}
+      <br/>
+      <a class="tag" id="{{key}}">view</a>
+  </div>
+
+  {{/each}}
+
 </template>

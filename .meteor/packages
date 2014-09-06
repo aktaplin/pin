@@ -6,6 +6,7 @@
 standard-app-packages
 autopublish
 insecure
-bootstrap
 jquery
 http
+pinglamb:bootstrap3
+

@@ -4,7 +4,6 @@ autoupdate@1.0.5
 binary-heap@1.0.0
 blaze-tools@1.0.0
 blaze@1.0.3
-bootstrap@1.0.0
 callback-hook@1.0.0
 check@1.0.0
 ctl-helper@1.0.2
@@ -28,6 +27,7 @@ minimongo@1.0.1
 mongo-livedata@1.0.3
 observe-sequence@1.0.1
 ordered-dict@1.0.0
+pinglamb:bootstrap3@3.2.1
 random@1.0.0
 reactive-dict@1.0.0
 reload@1.0.0
