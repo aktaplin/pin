@@ -1,9 +1,17 @@
 <template name="tagBookmarks">
-  {{#if tagBookmarksListReturn}}
-  <div id="bookmarks">{{#each tagBookmarksListReturn }}
-    <p><a href="{{href}}">{{description}}</a>
-    </p>
-    {{/each}}
+  <div class="bookmarksWrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="affix-top panel bookmarks" data-spy="affix" data-offset-top="120">
+          {{#if tagBookmarksListReturn}}
+          <div class="panel-body">{{#each tagBookmarksListReturn }}
+            <p><a target="_blank" href="{{href}}">{{description}}</a>
+            </p>
+            {{/each}}
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
   </div>
-  {{/if}}
 </template>

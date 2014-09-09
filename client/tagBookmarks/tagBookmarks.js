@@ -9,3 +9,11 @@ Template.tagBookmarks.tagBookmarksListReturn = function() {
 Template.tagBookmarks.clickedTag = function() {
   Session.get('clickedTag')
 }
+
+Template.tagBookmarks.rendered = function() {
+  $('#bookmarksWrapper').height($("#bookmarks").height());
+
+  $('#bookmarks').affix({
+    offset: { top: $('#header').offset().top }
+  });
+};

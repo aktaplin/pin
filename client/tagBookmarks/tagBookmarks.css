@@ -1,0 +1,13 @@
+.bookmarks.affix {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+.bookmarks {
+  background-color: white;
+}
+
+.tagBookmarks {
+  display: block;
+}
