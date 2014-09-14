@@ -11,9 +11,13 @@ Template.tagBookmarks.clickedTag = function() {
 }
 
 Template.tagBookmarks.rendered = function() {
-  $('#bookmarksWrapper').height($("#bookmarks").height());
+  $('#bookmarks').height($("#bookmarksWrapper").height());
 
-  $('#bookmarks').affix({
-    offset: { top: $('#header').offset().top }
+  $(function() {
+    $(panel - body).pagination({
+      items: 100,
+      itemsOnPage: 10,
+      cssStyle: 'light-theme'
+    });
   });
 };

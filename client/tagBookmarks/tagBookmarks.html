@@ -1,17 +1,13 @@
 <template name="tagBookmarks">
   <div class="bookmarksWrapper">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="affix-top panel bookmarks" data-spy="affix" data-offset-top="120">
-          {{#if tagBookmarksListReturn}}
-          <div class="panel-body">{{#each tagBookmarksListReturn }}
-            <p><a target="_blank" href="{{href}}">{{description}}</a>
-            </p>
-            {{/each}}
-          </div>
-          {{/if}}
-        </div>
+    <div class="affix panel bookmarks" data-spy="affix" data-offset-top="99">
+      {{#if tagBookmarksListReturn}}
+      <div class="panel-body">{{#each tagBookmarksListReturn }}
+        <p><a target="_blank" href="{{href}}">{{description}}</a>
+        </p>
+        {{/each}}
       </div>
+      {{/if}}
     </div>
   </div>
 </template>
