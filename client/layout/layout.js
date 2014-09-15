@@ -1,9 +1,9 @@
-Template.layout.tagListReturn = function() {
-  Meteor.call('getTags', function(err, results) {
-    console.log(results.content);
-    Session.set('tags', JSON.parse(results.content));
-  });
-  return Session.get('tags');
+Template.layout.events = {
+  'click .tag': function(event) {
+    console.log(event.target.id)
+    Session.set('clickedTag', event.target.id)
+    Session.set('bookmarkDetail', true)
+  }
 };
 
 UI.registerHelper('addKeys', function(all) {
@@ -15,10 +15,6 @@ UI.registerHelper('addKeys', function(all) {
   });
 });
 
-Template.layout.events = {
-  'click .tag': function(event) {
-    console.log(event.target.id)
-    Session.set('clickedTag', event.target.id)
-    Session.set('bookmarkDetail', true)
-  }
-};
+Template.layout.tagListReturn = function() {
+  Meteor.call('tagListReturn')
+}

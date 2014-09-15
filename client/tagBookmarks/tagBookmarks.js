@@ -12,12 +12,4 @@ Template.tagBookmarks.clickedTag = function() {
 
 Template.tagBookmarks.rendered = function() {
   $('#bookmarks').height($("#bookmarksWrapper").height());
-
-  $(function() {
-    $(panel - body).pagination({
-      items: 100,
-      itemsOnPage: 10,
-      cssStyle: 'light-theme'
-    });
-  });
 };
