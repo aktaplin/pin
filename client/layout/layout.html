@@ -1,28 +1,12 @@
 <template name="layout">
-
-  <div id="header" class="page-header">
-    <h1>pinboard.in tags for aktaplin <small>batch organize</small></h1>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      {{>tagBookmarks}}
+  <div class="container-fluid">
+    <div id="header" class="page-header">
+      <h1>Pinborganizer</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        {{>yield}}
+      </div>
     </div>
   </div>
-  
-  <div class="row">
-    {{#each addKeys tagListReturn}}
-    <div class="col-md-12">
-      <h4>{{key}}</h4>
-      {{#times value}}
-      <svg height="15" width="15">
-        <rect width="15" height="15" stroke="black" stroke-width="0" fill="#42294C" />
-      </svg>
-      {{/times}}
-      <br/>
-      <a class="tag" id="{{key}}">view</a>
-    </div>
-    {{/each}}
-  </div>
-
 </template>

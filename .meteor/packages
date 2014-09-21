@@ -9,4 +9,8 @@ insecure
 jquery
 http
 pinglamb:bootstrap3
+accounts-twitter
+accounts-ui
+iron:router
+fuatsengul:iron-router-auth
 
