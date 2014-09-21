@@ -3,13 +3,16 @@ Router.map(function() {
     path: '/',
     template: 'home',
     layoutTemplate: 'layout',
-    loginRequired: 'login',
-    redirectOnLogin: true,
+    loginRequired: {
+      name: 'login',
+      shouldRoute: false
+    }
   });
 
   this.route('login', {
     path: '/login',
     template: 'login',
     layoutTemplate: 'login',
+    redirectOnLogin: true,
   });
 });
