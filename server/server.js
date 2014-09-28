@@ -9,9 +9,23 @@ Meteor.methods({
 
   'tagListReturn': function() {
     Meteor.call('getTags', function(err, results) {
-      console.log(results.content);
-      // Session.set('tags', JSON.parse(results.content)); PUT THEM IN THE COLLECTION HERE//
+      var tags = JSON.parse(results.content);
+      console.log(tags);
+      for (var key in tags) {
+        Tags.insert({
+          title: key,
+          count: tags[key],
+          user: Meteor.user()
+        });
+      }
+
     });
     //return Session.get('tags');//
   },
+});
+
+Meteor.startup(function () {
+  if (Meteor.isServer) {
+    Tags.remove({});
+  }
 });

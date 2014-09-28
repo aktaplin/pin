@@ -1,9 +1,5 @@
 Template.tagBookmarks.tagBookmarksListReturn = function() {
-  Meteor.call('getBookmarksByTag', Session.get('clickedTag'), function(err, results) {
-    console.log(results.content);
-    Session.set('bookmarksByTag', JSON.parse(results.content));
-  });
-  return Session.get('bookmarksByTag');
+  Meteor.call('tagListReturn')
 };
 
 Template.tagBookmarks.clickedTag = function() {
