@@ -9,12 +9,13 @@ Meteor.methods({
 
   'tagListReturn': function() {
     Meteor.call('getTags', function(err, results) {
+      Tags.remove({});
       var tags = JSON.parse(results.content);
       console.log(tags);
       for (var key in tags) {
         Tags.insert({
           title: key,
-          count: tags[key],
+          count: parseInt(tags[key]),
           user: Meteor.user()
         });
       }
@@ -24,8 +25,19 @@ Meteor.methods({
   },
 });
 
-Meteor.startup(function () {
+Meteor.startup(function() {
   if (Meteor.isServer) {
     Tags.remove({});
+    Meteor.call('tagListReturn');
+  }
+
+  if (Meteor.isServer) {
+    Meteor.startup(function() {
+      return Meteor.methods({
+        removeAllTags: function() {
+          return Tags.remove({});
+        }
+      });
+    });
   }
 });

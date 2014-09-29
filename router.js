@@ -18,7 +18,7 @@ Router.map(function() {
 
   this.route('tags', {
     path: '/tags',
-    template: 'tagBookmarks',
+    template: 'tags',
     layoutTemplate: 'layout',
     loginRequired: {
       name: 'login',

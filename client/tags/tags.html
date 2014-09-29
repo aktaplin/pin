@@ -1,7 +1,9 @@
 <template name="tags">
   <div class="bookmarksWrapper">
-    <div class="affix panel bookmarks" data-spy="affix" data-offset-top="99">
-      {{> tagList }}
+    <div class="panel bookmarks">
+      {{#each tagList }}
+        {{> tagItem }}
+      {{/each}}
     </div>
   </div>
 </template>

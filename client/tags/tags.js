@@ -1,3 +1,7 @@
 Template.tags.tagList = function() {
-  Meteor.call('tagListReturn')
+  return Tags.find({}, {
+    sort: {
+      count: -1
+    }
+  }).fetch();
 }
