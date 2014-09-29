@@ -1,0 +1,14 @@
+<template name="tagItem">
+  <div class="tagRow row">
+    <div class="col-md-2">
+      <p class="tag" id="{{title}}">{{title}}</p>
+    </div>
+    <div class="col-md-10">
+      {{ #times count }}
+      <svg height="15" width="15">
+        <rect width="15" height="15" stroke="black" stroke-width="0" fill="#42294C" />
+      </svg>
+      {{ /times }}
+    </div>
+  </div>
+</template>
