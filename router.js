@@ -13,7 +13,7 @@ Router.map(function() {
     path: '/login',
     template: 'login',
     layoutTemplate: 'login',
-    redirectOnLogin: true,
+    redirectOnLogin: true
   });
 
   this.route('tags', {

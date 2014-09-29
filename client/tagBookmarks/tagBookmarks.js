@@ -5,3 +5,11 @@ Template.tagBookmarks.clickedTag = function() {
 Template.tagBookmarks.rendered = function() {
   $('#bookmarks').height($("#bookmarksWrapper").height());
 };
+
+Template.tagBookmarks.tagBookmarksListReturn = function() {
+  Meteor.call('getBookmarksByTag', Session.get('clickedTag'), function(err, results) {
+    console.log(results.content);
+    Session.set('bookmarksByTag', JSON.parse(results.content));
+  });
+  return Session.get('bookmarksByTag');
+};
