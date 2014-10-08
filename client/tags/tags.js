@@ -11,5 +11,6 @@ Template.layout.events = {
     console.log(event.target.id)
     Session.set('clickedTag', event.target.id)
     Session.set('bookmarkDetail', true)
+    Session.set('tagIndex', 0)
   }
 };

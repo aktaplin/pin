@@ -2,10 +2,11 @@
   <div class="bookmarksWrapper">
     <div class="affix panel bookmarks" data-spy="affix" data-offset-top="99">
       {{#if tagBookmarksListReturn}}
-      <div class="panel-body">{{#each tagBookmarksListReturn }}
-        <p><a target="_blank" href="{{href}}">{{description}}</a>
+      <div class="panel-body">
+        <p><a target="_blank" href="{{href}}">{{tagBookmarksListReturn.description}}</a>
         </p>
-        {{/each}}
+        <button type="button" class="btn btn-default btn-xs" id="prevBookmark">previous</button>
+        <button type="button" class="btn btn-default btn-xs" id="nextBookmark">next</button>
       </div>
       {{/if}}
     </div>
