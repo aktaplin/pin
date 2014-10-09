@@ -4,7 +4,7 @@ Template.tagBookmarks.clickedTag = function() {
 
 Template.tagBookmarks.rendered = function() {
   $('#bookmarks').height($("#bookmarksWrapper").height());
-  Session.setDefault('tagIndex', 0)
+  Session.set('tagIndex', 0);
 };
 
 Template.tagBookmarks.tagBookmarksListReturn = function() {
@@ -13,6 +13,7 @@ Template.tagBookmarks.tagBookmarksListReturn = function() {
   });
   var index = Session.get('tagIndex');
   var bookmarks = Session.get('bookmarksByTag');
+  console.log(bookmarks[index]);
   return bookmarks[index];
 };
 
