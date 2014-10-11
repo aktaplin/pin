@@ -1,5 +1,12 @@
 <template name="tags">
   <div class="bookmarksWrapper">
+    {{#if clickedTag}}
+    <div class="row">
+      <div class="col-md-12">
+        {{> tagBookmarks}}
+      </div>
+    </div>
+    {{/if}}
     <div class="bookmarks">
       {{#each tagList }}
         {{> tagItem }}

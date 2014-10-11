@@ -14,3 +14,7 @@ Template.layout.events = {
     Session.set('tagIndex', 0)
   }
 };
+
+Template.tags.clickedTag = function() {
+  return Session.get('bookmarkDetail')
+};

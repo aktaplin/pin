@@ -1,13 +1,9 @@
-Template.tagBookmarks.clickedTag = function() {
-  Session.get('clickedTag')
-};
-
-Template.tagBookmarks.rendered = function() {
+Template.tagBookmarks.created = function() {
   $('#bookmarks').height($("#bookmarksWrapper").height());
   Session.set('tagIndex', 0);
 };
 
-Template.tagBookmarks.tagBookmarksListReturn = function() {
+Template.tagBookmarks.bookmark = function() {
   Meteor.call('getBookmarksByTag', Session.get('clickedTag'), function(err, results) {
     Session.set('bookmarksByTag', JSON.parse(results.content));
   });
