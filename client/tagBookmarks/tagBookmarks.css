@@ -14,3 +14,9 @@
 .bookmarksWrapper {
   display: block;
 }
+
+#close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}

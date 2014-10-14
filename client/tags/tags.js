@@ -10,11 +10,15 @@ Template.layout.events = {
   'click .tag': function(event) {
     console.log(event.target.id)
     Session.set('clickedTag', event.target.id)
-    Session.set('bookmarkDetail', true)
+    Session.set('tagOn', true)
     Session.set('tagIndex', 0)
-  }
+  },
+
+  'click #close': function() {
+    Session.set('tagOn', false)
+  },
 };
 
-Template.tags.clickedTag = function() {
-  return Session.get('bookmarkDetail')
+Template.tags.tagOn = function() {
+  return Session.get('tagOn')
 };
