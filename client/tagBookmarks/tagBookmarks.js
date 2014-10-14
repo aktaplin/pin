@@ -13,6 +13,10 @@ Template.tagBookmarks.bookmark = function() {
   return bookmarks[index];
 };
 
+Template.tagBookmarks.clickedTag = function() {
+  return Session.get('clickedTag');
+}
+
 Template.tagBookmarks.events = {
   'click #nextBookmark': function(event) {
     var count = Session.get('tagIndex');
