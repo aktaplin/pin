@@ -1,3 +1,5 @@
+
+
 Meteor.methods({
   'getTags': function() {
     return Meteor.http.call('GET', 'https://api.pinboard.in/v1/tags/get?auth_token=aktaplin:9A298BE025EAD8D36ED5&format=json');
@@ -18,10 +20,8 @@ Meteor.methods({
           count: parseInt(tags[key]),
           user: Meteor.user()
         });
-      }
-
-    });
-    //return Session.get('tags');//
+      };
+    })
   },
 });
 

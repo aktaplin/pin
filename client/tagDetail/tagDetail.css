@@ -13,8 +13,8 @@
 }
 .bookmarksWrapper {
   display: block;
+  padding-bottom: 40px;
 }
-
 #close {
   position: absolute;
   top: 15px;
