@@ -1,15 +1,13 @@
 <template name="tagDetail">
-  <div class="bookmarksWrapper">
-    <div class="affix bookmarks" data-spy="affix">
-      <div>
-        <h2>{{clickedTag}} <small>{{bookmarkData.count}}</small></h2>
-        <p><a target="_blank" href="{{bookmarkData.bookmark.href}}">{{bookmarkData.bookmark.description}}</a>
-        </p>
-        <p>{{bookmarkData.bookmark.tags}}</p>
-        <button type="button" class="btn btn-default btn-xs" id="prevBookmark">previous</button>
-        <button type="button" class="btn btn-default btn-xs" id="nextBookmark">next</button>
-        <span id="close" class="glyphicon glyphicon-remove"></span>
-      </div>
+  <div class="affix bookmarks row panel" data-spy="affix">
+    <div class="col-md-12">
+      <h2>{{clickedTag}} <small>{{bookmarkData.count}}</small></h2>
+      <span id="close" class="glyphicon glyphicon-remove"></span>
+      <p><a target="_blank" href="{{bookmarkData.bookmark.href}}">{{bookmarkData.bookmark.description}}</a>
+      </p>
+      <p>{{bookmarkData.bookmark.tags}}</p>
+      <button id="prevBookmark" type="button" class="btn btn-default btn-sm">previous</button>
+      <button id="nextBookmark" type="button" class="btn btn-default btn-sm">next</button>
     </div>
   </div>
 </template>

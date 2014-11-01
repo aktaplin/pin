@@ -12,7 +12,6 @@ Template.tagDetail.bookmarkData = function() {
   console.log(bookmarks[index]);
   return bookmarkData = {
     bookmark : bookmarks[index],
-  //START HERE, TRYING TO LOAD A COUNT INTO THE BOOKMARK DETAIL //
     count : Tags.find( {title: Session.get('clickedTag')}).fetch()[0].count
   }
 };

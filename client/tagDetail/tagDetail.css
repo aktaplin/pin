@@ -7,13 +7,7 @@
   background-color: white;
   z-index: 9999;
   display: block;
-}
-.tagBookmarks {
-  display: block;
-}
-.bookmarksWrapper {
-  display: block;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
 }
 #close {
   position: absolute;
